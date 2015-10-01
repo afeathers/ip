@@ -15,25 +15,60 @@ struct ProductInfo
 import UIKit
 import Parse
 
+@IBDesignable
 class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
-
-    
-    
-    var dealList = []
- 
+    var productIds = [""]
+    var productNames = [""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let productIds = PFUser.currentUser()?.objectForKey("accepted")
         
-        let dealList: Array = ["\(productIds)"]
-        print(dealList)
+        // Ask for the current user's follow list.
+        let Ids = PFUser.currentUser()?.objectForKey("accepted") as! NSArray
+        print(Ids)
         
+        let query = PFQuery(className: "project")
+        query.whereKey("objectId", containedIn: Ids as [AnyObject])
+        
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError!) -> Void in
+            
+            if error == nil {
+                
+                // query successful - display number of rows found
+                println("Successfully retrieved \(objects.count) people")
+                
+                // print name & hair color of each person found
+                for object in objects {
+                    
+                    
+                    self.productNames.append(object.projectname!) as! NSString
+                    self.productIds.append(object.objectId!) as NSString
+                    
+                    
+                }
+            } else {
+                
+                // Log details of the failure
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
+        
+        
+        
+                        //self.productNames.append(object.projectname!) as! String
+                        //self.productIds.append(object.objectId!)
+       
+        
+        
+        
+        // Navigation bar setup
         self.navigationBar.barTintColor = UIColor(red:0.12, green:0.45, blue:0.73, alpha:1.0)
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationBar.translucent = false
@@ -41,6 +76,8 @@ class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,7 +85,7 @@ class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(categoryTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dealList.count;
+        return self.productIds.count;
     }
     
     
@@ -56,7 +93,7 @@ class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier("dealcell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = self.dealList[indexPath.row] as! String
+        cell.textLabel?.text = self.productIds[indexPath.row] as! String
         
         return UITableViewCell()
         
@@ -74,17 +111,5 @@ class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func dismiss() {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
