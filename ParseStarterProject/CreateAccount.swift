@@ -1,7 +1,7 @@
 import UIKit
 import Parse
 
-class SignUp: UIViewController, UITextFieldDelegate, MenuTransitionManagerDelegate {
+class CreateAccount: UIViewController, UITextFieldDelegate, MenuTransitionManagerDelegate {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     var menuTransitionManager = MenuTransitionManager()

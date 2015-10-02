@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 
 
 class MenuTableViewController: UIViewController {
@@ -15,7 +15,14 @@ class MenuTableViewController: UIViewController {
     var currentItem = ""
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let menuTableViewController = segue.sourceViewController 
+        
+        let menuTableViewController = segue.sourceViewController
+        
+        if segue == "logOut" {
+            
+            PFUser.logOut()
+            var currentUser = PFUser.currentUser()
+        }
         
     }
     

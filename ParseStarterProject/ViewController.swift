@@ -5,6 +5,7 @@ import FBSDKCoreKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     var signupActive = true
+    var currentUser = ""
 
     @IBOutlet var usernameLogin: UITextField!
     @IBOutlet var passwordLogin: UITextField!
@@ -89,6 +90,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PFUser.logOut()
+        print("\(PFUser.currentUser())")
         
         self.usernameLogin.delegate = self
         self.passwordLogin.delegate = self
@@ -105,7 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         
-        PFUser.logOut()
+        
         
         
         if let username = PFUser.currentUser()?.username {

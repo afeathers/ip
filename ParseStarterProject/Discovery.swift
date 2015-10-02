@@ -158,6 +158,8 @@ class Discovery: UIViewController, MenuTransitionManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("\(PFUser.currentUser())")
+        
         self.navigationController!.navigationBar.barTintColor = UIColor(red:0.12, green:0.45, blue:0.73, alpha:1.0)
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController!.navigationBar.translucent = false

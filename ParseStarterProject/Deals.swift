@@ -6,11 +6,7 @@
 //  Copyright © 2015 Parse. All rights reserved.
 //
 
-struct ProductInfo
-{
-    var productName:String!
-    
-}
+
 
 import UIKit
 import Parse
@@ -21,60 +17,45 @@ class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var productIds = [""]
-    var productNames = [""]
+    var productIds = [String]()
+    var productNames = [String]()
+    var imageFiles = [PFFile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.productIds.removeAll(keepCapacity: true)
+        self.productNames.removeAll(keepCapacity: true)
         
-        // Ask for the current user's follow list.
+        // Ask for the current user's list of saved projects.
         let Ids = PFUser.currentUser()?.objectForKey("accepted") as! NSArray
         print(Ids)
         
-        let query = PFQuery(className: "project")
-        query.whereKey("objectId", containedIn: Ids as [AnyObject])
-        
-        
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError!) -> Void in
-            
-            if error == nil {
-                
-                // query successful - display number of rows found
-                println("Successfully retrieved \(objects.count) people")
-                
-                // print name & hair color of each person found
+        // Requesting the Project objects based on the Ids retrieved.
+        let projectRetrieval = PFQuery(className: "project")
+        projectRetrieval.whereKey("objectId", containedIn: Ids as [AnyObject])
+        projectRetrieval.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+            if let objects = objects {
                 for object in objects {
+                    //Append the productNames array with retrieved projectnames
+                    self.productNames.append(object["projectname"] as! String)
                     
-                    
-                    self.productNames.append(object.projectname!) as! NSString
-                    self.productIds.append(object.objectId!) as NSString
-                    
+                    print("Projectnames: \(self.productNames)")
                     
                 }
-            } else {
                 
-                // Log details of the failure
-                NSLog("Error: %@ %@", error, error.userInfo!)
             }
-        }
-        
-        
-        
-                        //self.productNames.append(object.projectname!) as! String
-                        //self.productIds.append(object.objectId!)
-       
-        
+            self.tableView.reloadData()
+            
+        })
         
         
         // Navigation bar setup
-        self.navigationBar.barTintColor = UIColor(red:0.12, green:0.45, blue:0.73, alpha:1.0)
+        self.navigationBar.barTintColor = UIColor(red: 0.1216, green: 0.4471, blue: 0.7294, alpha: 1.0)
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationBar.translucent = false
 
-        return
-        // Do any additional setup after loading the view.
+        
     }
     
     
@@ -84,18 +65,18 @@ class Deals: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(categoryTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.productIds.count;
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.productNames.count
     }
     
     
-    func tableView(categoryTable: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("dealcell", forIndexPath: indexPath) as UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("dealcell", forIndexPath: indexPath) as! DealCell
         
-        cell.textLabel?.text = self.productIds[indexPath.row] as! String
+        cell.productName.text = self.productNames[indexPath.row] 
         
-        return UITableViewCell()
+        return cell
         
     }
     

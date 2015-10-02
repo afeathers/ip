@@ -13,9 +13,6 @@
             <string>GothamNarrow-Medium</string>
             <string>GothamNarrow-Medium</string>
             <string>GothamNarrow-Medium</string>
-            <string>GothamNarrow-Medium</string>
-            <string>GothamNarrow-Medium</string>
-            <string>GothamNarrow-Medium</string>
         </mutableArray>
         <mutableArray key="SanFranciscoDisplay-Light.otf">
             <string>SanFranciscoDisplay-Light</string>
@@ -26,8 +23,13 @@
             <string>SanFranciscoDisplay-Medium</string>
             <string>SanFranciscoDisplay-Medium</string>
             <string>SanFranciscoDisplay-Medium</string>
+            <string>SanFranciscoDisplay-Medium</string>
+            <string>SanFranciscoDisplay-Medium</string>
         </mutableArray>
         <mutableArray key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
             <string>SanFranciscoDisplay-Regular</string>
             <string>SanFranciscoDisplay-Regular</string>
             <string>SanFranciscoDisplay-Regular</string>
@@ -45,10 +47,9 @@
             <string>SanFranciscoDisplay-Semibold</string>
             <string>SanFranciscoDisplay-Semibold</string>
             <string>SanFranciscoDisplay-Semibold</string>
-            <string>SanFranciscoDisplay-Semibold</string>
-            <string>SanFranciscoDisplay-Semibold</string>
         </mutableArray>
         <mutableArray key="SanFranciscoText-Light.otf">
+            <string>SanFranciscoText-Light</string>
             <string>SanFranciscoText-Light</string>
             <string>SanFranciscoText-Light</string>
             <string>SanFranciscoText-Light</string>
@@ -69,73 +70,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="enter username" placeholder="enter username" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XWb-m0-0l9">
-                                <rect key="frame" x="0.0" y="246" width="375" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" borderStyle="roundedRect" placeholder="username" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XWb-m0-0l9">
+                                <rect key="frame" x="87" y="246" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Vo8-3d-Y0t"/>
                                 </constraints>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8W-fx-tXC">
-                                <rect key="frame" x="0.0" y="497" width="375" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ue5-Cj-5AP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Semibold" family="San Francisco Display" pointSize="16"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="0.1215686275" green="0.44705882349999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="normLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVg-Z9-Qar"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="enter password" placeholder="enter password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l8T-Jo-vzT">
-                                <rect key="frame" x="0.0" y="297" width="375" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" placeholder="enter password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l8T-Jo-vzT">
+                                <rect key="frame" x="87" y="297" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1BD-Zg-M6x"/>
                                 </constraints>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAu-yO-pqX">
-                                <rect key="frame" x="0.0" y="535" width="375" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IBm-Kf-mQZ"/>
-                                    <constraint firstAttribute="width" constant="193" id="XxG-mz-Voe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Semibold" family="San Francisco Display" pointSize="16"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
-                                <state key="normal" title="CREATE NEW ACCOUNT">
-                                    <color key="titleColor" red="0.1215686275" green="0.44705882349999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="XxG-mz-Voe"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4Z-gx-XDU"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipindexlogogreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-cg-A9T">
-                                <rect key="frame" x="87" y="103" width="200" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ipindexlogogreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-cg-A9T">
+                                <rect key="frame" x="62" y="78" width="250" height="125"/>
                                 <color key="tintColor" red="0.1215686275" green="0.44705882349999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="7E4-zr-Msv"/>
-                                    <constraint firstAttribute="width" constant="200" id="QxF-2b-7iU"/>
-                                    <constraint firstAttribute="height" constant="100" id="Ubt-PB-C20"/>
+                                    <constraint firstAttribute="width" constant="250" id="QxF-2b-7iU"/>
+                                    <constraint firstAttribute="height" constant="125" id="Ubt-PB-C20"/>
                                     <constraint firstAttribute="height" constant="100" id="ff3-R5-Dlc"/>
                                     <constraint firstAttribute="width" constant="300" id="oyd-J5-j0g"/>
                                     <constraint firstAttribute="height" constant="150" id="tee-xi-Ewk"/>
@@ -149,35 +112,78 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8W-fx-tXC">
+                                <rect key="frame" x="87" y="492" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.72941176470588232" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="L6H-WQ-GBc"/>
+                                    <constraint firstAttribute="height" constant="40" id="vWF-PX-cla"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="normLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVg-Z9-Qar"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAu-yO-pqX">
+                                <rect key="frame" x="87" y="550" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.16006728770619325" green="0.63246678738726059" blue="0.96464646464646464" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IBm-Kf-mQZ"/>
+                                    <constraint firstAttribute="width" constant="193" id="XxG-mz-Voe"/>
+                                    <constraint firstAttribute="width" constant="200" id="jhI-i7-wWR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XxG-mz-Voe"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4Z-gx-XDU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f8W-fx-tXC" firstAttribute="top" secondItem="l8T-Jo-vzT" secondAttribute="bottom" constant="8" id="14g-mt-VuQ"/>
-                            <constraint firstItem="xAu-yO-pqX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Dz-7d-YP8"/>
+                            <constraint firstItem="f8W-fx-tXC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4KH-G5-8Ne"/>
                             <constraint firstItem="Kok-cg-A9T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BWb-6Y-G0Q"/>
                             <constraint firstItem="XWb-m0-0l9" firstAttribute="top" secondItem="Kok-cg-A9T" secondAttribute="bottom" constant="51" id="GQ2-r1-rl8"/>
+                            <constraint firstItem="l8T-Jo-vzT" firstAttribute="top" secondItem="XWb-m0-0l9" secondAttribute="bottom" constant="10" id="GwU-GW-TRu"/>
                             <constraint firstItem="XWb-m0-0l9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Gxy-CJ-p9U"/>
-                            <constraint firstItem="xAu-yO-pqX" firstAttribute="top" secondItem="f8W-fx-tXC" secondAttribute="bottom" constant="8" id="LIh-n8-IcP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xAu-yO-pqX" secondAttribute="trailing" constant="-20" id="O7M-On-qEk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XWb-m0-0l9" secondAttribute="trailing" constant="-20" id="Po0-uG-ygW"/>
                             <constraint firstItem="XWb-m0-0l9" firstAttribute="top" secondItem="Kok-cg-A9T" secondAttribute="bottom" constant="43" id="SLn-r1-SBu"/>
+                            <constraint firstItem="Kok-cg-A9T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="Tb6-GY-bD1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f8W-fx-tXC" secondAttribute="trailing" constant="-20" id="WQ9-nm-5p8"/>
                             <constraint firstItem="l8T-Jo-vzT" firstAttribute="centerX" secondItem="XWb-m0-0l9" secondAttribute="centerX" id="cQm-pJ-i78"/>
+                            <constraint firstItem="xAu-yO-pqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dXK-TD-QjR"/>
                             <constraint firstItem="l8T-Jo-vzT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="eO3-QJ-VUx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f8W-fx-tXC" secondAttribute="trailing" constant="-20" id="gRM-G9-sux"/>
                             <constraint firstItem="XWb-m0-0l9" firstAttribute="centerX" secondItem="Kok-cg-A9T" secondAttribute="centerX" id="gkm-Y0-R0t"/>
                             <constraint firstItem="f8W-fx-tXC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="jTT-XA-v5K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l8T-Jo-vzT" secondAttribute="trailing" constant="-20" id="mew-3R-n76"/>
-                            <constraint firstItem="l8T-Jo-vzT" firstAttribute="top" secondItem="XWb-m0-0l9" secondAttribute="bottom" constant="2" id="n02-9f-xUP"/>
-                            <constraint firstItem="Kok-cg-A9T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="oxf-3s-Na6"/>
+                            <constraint firstItem="xAu-yO-pqX" firstAttribute="top" secondItem="f8W-fx-tXC" secondAttribute="bottom" constant="18" id="n5b-q3-CEl"/>
                             <constraint firstItem="Kok-cg-A9T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="sMv-gt-aun"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xAu-yO-pqX" secondAttribute="bottom" constant="58" id="wHT-hn-hci"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xAu-yO-pqX" secondAttribute="bottom" constant="77" id="zJa-N3-hnf"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="sMv-gt-aun"/>
                                 <exclude reference="GQ2-r1-rl8"/>
                                 <exclude reference="14g-mt-VuQ"/>
+                                <exclude reference="WQ9-nm-5p8"/>
+                                <exclude reference="gRM-G9-sux"/>
+                                <exclude reference="jTT-XA-v5K"/>
                             </mask>
                         </variation>
                     </view>
@@ -465,21 +471,39 @@
                                                 <segue destination="9y5-lK-3Mf" kind="presentation" id="9Op-ky-kQ9"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="KX9-IV-lvP"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="KX9-IV-lvP">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MXo-5U-Ao2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MXo-5U-Ao2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dealcell" id="puJ-fw-xjv">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dealcell" rowHeight="80" id="puJ-fw-xjv" customClass="DealCell" customModule="IP_INDEX" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="puJ-fw-xjv" id="Kn4-Kq-KUT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSd-qo-U5j">
+                                                    <rect key="frame" x="8" y="25" width="288" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nSd-qo-U5j" secondAttribute="bottom" constant="17" id="0Xp-gz-JgL"/>
+                                                <constraint firstItem="nSd-qo-U5j" firstAttribute="top" secondItem="Kn4-Kq-KUT" secondAttribute="topMargin" constant="17" id="6qX-Oi-XcD"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="nSd-qo-U5j" secondAttribute="leading" id="8Th-Cr-lNS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="productName" destination="nSd-qo-U5j" id="NyT-rU-aCV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -580,10 +604,22 @@
                                     <segue destination="WP6-h3-AQM" kind="presentation" id="lGs-jc-zy8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mze-qf-DY4">
+                                <rect key="frame" x="20" y="515" width="167" height="45"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="20"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOut" id="UJc-EK-r41"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.44705882352941173" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nZj-Vk-SfU" firstAttribute="top" secondItem="Mze-qf-DY4" secondAttribute="bottom" constant="107" id="1Ok-3m-xcR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ssd-Jb-R1S" secondAttribute="leading" id="59m-RW-rMF"/>
+                            <constraint firstItem="Mze-qf-DY4" firstAttribute="top" secondItem="J31-yT-giY" secondAttribute="bottom" constant="8" id="HGb-97-23H"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ism-rD-dLP" secondAttribute="leading" id="Lkk-oj-dlJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eAF-te-Ku8" secondAttribute="leading" id="R6A-3Z-8Xr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="G8z-5v-cgB" secondAttribute="leading" id="Ubt-7h-P6k"/>
@@ -593,7 +629,13 @@
                             <constraint firstItem="J31-yT-giY" firstAttribute="top" secondItem="ism-rD-dLP" secondAttribute="bottom" constant="8" id="bx1-5p-Th7"/>
                             <constraint firstItem="ism-rD-dLP" firstAttribute="top" secondItem="Ssd-Jb-R1S" secondAttribute="bottom" constant="8" id="hN8-jk-3Nz"/>
                             <constraint firstAttribute="leadingMargin" secondItem="J31-yT-giY" secondAttribute="leading" id="sxm-rn-5J0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mze-qf-DY4" secondAttribute="leading" id="yzM-Ce-kSa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VgH-cd-9F0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -702,7 +744,7 @@
         <!--SignUp-->
         <scene sceneID="Aoh-4g-Ez1">
             <objects>
-                <viewController storyboardIdentifier="SignUp0" title="SignUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xyP-28-aPE" customClass="SignUp" customModule="IP_INDEX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xyP-28-aPE" customClass="CreateAccount" customModule="IP_INDEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DKo-y6-747"/>
                         <viewControllerLayoutGuide type="bottom" id="vAF-eN-M2x"/>
@@ -711,8 +753,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" placeholder="Username" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tsP-hI-JpL">
-                                <rect key="frame" x="0.0" y="253" width="375" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" placeholder="Username" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tsP-hI-JpL">
+                                <rect key="frame" x="0.0" y="253" width="375" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -721,7 +763,7 @@
                                     <constraint firstAttribute="width" constant="260" id="gVu-rS-S3G"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GothamNarrow-Medium" family="Gotham Narrow" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -730,8 +772,8 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" placeholder="Email Address" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IDs-h5-iGx">
-                                <rect key="frame" x="0.0" y="369" width="375" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IDs-h5-iGx">
+                                <rect key="frame" x="0.0" y="369" width="375" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -740,7 +782,7 @@
                                     <constraint firstAttribute="height" constant="50" id="pwM-uO-MZb"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GothamNarrow-Medium" family="Gotham Narrow" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -805,8 +847,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CEU-EW-gpq">
-                                <rect key="frame" x="0.0" y="309" width="375" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CEU-EW-gpq">
+                                <rect key="frame" x="0.0" y="309" width="375" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -815,7 +857,7 @@
                                     <constraint firstAttribute="height" constant="50" id="eDA-TS-nWe"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GothamNarrow-Medium" family="Gotham Narrow" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1463,7 +1505,8 @@
         <image name="savebutton.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Op-ky-kQ9"/>
-        <segue reference="lGs-jc-zy8"/>
+        <segue reference="Tkq-qf-nxb"/>
+        <segue reference="IY3-hY-RHE"/>
+        <segue reference="lxV-B4-9hh"/>
     </inferredMetricsTieBreakers>
 </document>
